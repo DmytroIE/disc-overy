@@ -1,0 +1,210 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+
+
+/*******************************
+            Plural
+*******************************/
+
+.ui.steps {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+
+  border-radius: 0;
+  border: none;
+  height: 9rem;
+}
+
+
+
+
+/*******************************
+           Singular
+*******************************/
+
+.ui.steps .step {
+  position: relative;
+  display: block;
+ 
+  margin: 0;
+  padding: 0;
+  background: @green;
+  color: @textColor;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  border-right: none;
+  transition: @transition;
+  height: 5px;
+}
+
+/* Arrow */
+.ui.steps .step:after {
+  content: none;
+}
+
+
+
+/* First Step */
+.ui.steps .step:first-child {
+  padding-left: 0;
+  border-radius: 0;
+}
+
+/* Last Step */
+.ui.steps .step:last-child {
+  border-radius: 0;
+}
+.ui.steps .step:last-child {
+  border-right: none;
+  margin-right: 0em;
+}
+
+/* Only Step */
+.ui.steps .step:only-child {
+  border-radius: 0;
+}
+
+
+/*******************************
+            Content
+*******************************/
+
+/* Title */
+.ui.steps .step .title {
+  display: none;
+}
+
+
+/* Description */
+.ui.steps .step .description {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: @descriptionFontWeight;
+  font-size: @descriptionFontSize;
+  color: @textColor;
+  text-align: center;
+}
+
+.ui.steps .step .title ~ .description {
+  margin-top: 0;
+}
+
+
+/*******************************
+            Types
+*******************************/
+
+/*--------------
+     Ordered
+---------------*/
+
+
+.ui.ordered.steps .step:before {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: @massive;
+  height: @massive;
+  border-radius: 11px;
+  z-index: 5;
+
+  text-align: center;
+  content: counters(ordered, ".");
+  margin-right: 0;
+
+  font-size: @small;
+  line-height: @massive;
+
+}
+
+
+/*******************************
+             States
+*******************************/
+
+
+/* Active */
+
+.ui.ordered.steps .step.active:before,
+.ui.steps .active.step .icon {
+  color: @black;
+  background-color: @activeBackground;
+}
+
+
+
+/* Completed */
+.ui.steps .step.completed > .icon:before,
+.ui.ordered.steps .step.completed:before {
+  color: @black;
+  content: counters(ordered, ".");
+  font-family: @pageFont;
+  background-color: @completedColor;
+}
+
+
+
+/* Disabled */
+
+.ui.steps .disabled.step,
+.ui.steps .disabled.step .title,
+.ui.steps .disabled.step .description {
+  color: @textColor;
+}
+
+.ui.steps .disabled.step:before {
+  background: @disabledBackground;
+  color: @black;
+}
+
+/*---------------
+    Responsive
+----------------*/
+
+/* Mobile (Default) */
+@media only screen and (max-width: (@largestMobileScreen)) {
+
+  .ui.steps:not(.unstackable) {
+    display: inline-flex;
+    overflow: visible;
+    flex-direction: column;
+    height: auto;
+  }
+  .ui.steps:not(.unstackable) .step {
+    width: 100% !important;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: @40px;
+  }
+  .ui.steps:not(.unstackable) .step:first-child {
+    padding: 0;
+    border-radius: 0;
+  }
+  .ui.steps:not(.unstackable) .step:last-child {
+    border-radius: 0;
+    margin-bottom: 0px;
+  }
+
+  
+
+  /* Description */
+  .ui.steps:not(.unstackable) .step .description {
+
+    top: -15px;
+    left: 70%;
+    transform: translateX(-50%);
+
+  }
+
+}

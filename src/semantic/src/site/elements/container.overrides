@@ -1,0 +1,8 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.justified.container {
+  display: flex;
+  justify-content: space-between;
+}

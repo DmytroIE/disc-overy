@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* additional css for the components */
+
+.page {
+  padding: 50px 0 50px;
+}
+
+.steps-container {
+  padding: 0 80px 0;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  margin-bottom: 30px;
+}
+
+.input-field--first {
+  margin-bottom: 30px;
+}
+
+.SNMP-form {
+  margin-bottom: 20px;
+}
+
+.source-selector {
+  margin-bottom: 14px;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .page {
+    padding: 15px 10px 15px;
+  }
+  .steps-container {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+
+

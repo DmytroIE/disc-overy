@@ -1,0 +1,11 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+/*-------------------
+       Element
+--------------------*/
+
+@textColor: @white;
+@backgroundColor: #aaaaaa;
+@horizontalPadding: 4em;
+@verticalPadding: @inputVerticalPadding;

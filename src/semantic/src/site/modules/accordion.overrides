@@ -1,0 +1,9 @@
+/*******************************
+        User Overrides
+*******************************/
+.ui.accordion,
+.ui.accordion .accordion {
+  padding: 15px;
+  border: 1px solid #193644;
+  border-radius: 3px;
+}

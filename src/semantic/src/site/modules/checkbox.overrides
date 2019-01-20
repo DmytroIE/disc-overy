@@ -1,0 +1,11 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.checkbox label {
+  margin-right: @labelDistance;
+}
+
+.ui.checkbox:last-child label {
+  margin-right: 0;
+}

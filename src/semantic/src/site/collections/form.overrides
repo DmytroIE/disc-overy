@@ -1,0 +1,10 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.form .success.message,
+.ui.form .warning.message,
+.ui.form .error.message {
+  font-size: @mini;
+  padding: 0.5em 1em;
+}
